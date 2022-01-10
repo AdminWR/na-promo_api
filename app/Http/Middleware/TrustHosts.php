@@ -14,7 +14,7 @@ class TrustHosts extends Middleware
     public function hosts()
     {
         return [
-            'na-promo.ru',
+            'it.na-promo.ru',
             $this->allSubdomainsOfApplicationUrl(),
         ];
     }
