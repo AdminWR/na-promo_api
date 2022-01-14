@@ -37,7 +37,7 @@ class Telegram extends Notification
     public function toTelegram($notifiable) {
 
         return TelegramMessage::create()->to(-609061129)->content(
-            "Новая заявка на служение!\nИмя: {$notifiable->name}\nТелефон: {$notifiable->tel}\nEmail: {$notifiable->email}\nСообщение: {$notifiable->message}"
+            "Новая заявка на служение!\nИмя: {$notifiable->name}\nТелефон: {$notifiable->tel}\nEmail: {$notifiable->email}\nФорма: {$notifiable->title}\nСообщение: {$notifiable->message}"
         );
     }
 }

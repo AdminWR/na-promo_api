@@ -18,7 +18,8 @@ class FormsApiController extends Controller
             'name' => 'required|string',
             'tel' => 'required|string',
             'email' => 'required|email',
-            'msg' => 'required|string'
+            'msg' => 'required|string',
+            'title' => 'nullable|string'
         ]);
 
         $form = new Forms();
@@ -26,6 +27,7 @@ class FormsApiController extends Controller
         $form->tel = $request->input('tel');
         $form->email = $request->input('email');
         $form->message = $request->input('msg');
+        $form->title = $request->input('title');
 
         if ($form) {
             $form->save();
